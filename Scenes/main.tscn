@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0fmrjnpeusyw"]
+[gd_scene load_steps=7 format=3 uid="uid://b0fmrjnpeusyw"]
 
 [ext_resource type="Script" uid="uid://d2r0dyje3885s" path="res://Assets/character_body_2d.gd" id="1_8gbba"]
-[ext_resource type="Texture2D" uid="uid://bkmq4c8d0255y" path="res://icon.svg" id="2_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://3svnncrbj8eu" path="res://Assets/Sprites/Player/duskborn_sprite.png" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://f7sed208t5ha" path="res://Assets/Tiles/rock_tile.png" id="3_kry3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjvhh"]
+size = Vector2(19.1639, 26.2422)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("3_kry3j")
@@ -43,15 +46,25 @@ sources/2 = SubResource("TileSetAtlasSource_h2yge")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-314, -17)
 script = ExtResource("1_8gbba")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="PlayerAnimator" type="Node2D" parent="Player"]
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(177, -165)
-texture = ExtResource("2_jjvhh")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/PlayerAnimator"]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/PlayerAnimator"]
+position = Vector2(0, -7)
+texture = ExtResource("2_8gbba")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.59302, -6)
+scale = Vector2(1.41861, 1.7529)
+shape = SubResource("RectangleShape2D_jjvhh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -64.54)
