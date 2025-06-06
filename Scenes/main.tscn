@@ -49,6 +49,8 @@ sources/2 = SubResource("TileSetAtlasSource_h2yge")
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(-314, -17)
 script = ExtResource("1_8gbba")
+speed = 8.0
+jump_power = 12.0
 
 [node name="PlayerAnimator" type="Node2D" parent="Player"]
 
