@@ -24,3 +24,7 @@ func change_state(new_state: GAMESTATE):
 
 
 	current_state = new_state
+
+
+func get_current_state():
+	return current_state
