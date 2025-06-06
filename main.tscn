@@ -11,5 +11,7 @@ script = ExtResource("1_0xm2m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(164, 170)
+position = Vector2(177, -165)
 texture = ExtResource("2_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="."]
