@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0fmrjnpeusyw"]
+[gd_scene load_steps=16 format=3 uid="uid://b0fmrjnpeusyw"]
 
 [ext_resource type="Script" uid="uid://d2r0dyje3885s" path="res://Assets/Scripts/player_controller.gd" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://3svnncrbj8eu" path="res://Assets/Sprites/Player/duskborn_sprite.png" id="2_8gbba"]
 [ext_resource type="Script" uid="uid://caqo4a6qo1lgq" path="res://Assets/Scripts/player_animator.gd" id="2_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://f7sed208t5ha" path="res://Assets/Tiles/rock_tile.png" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://ndugg20hhy6w" path="res://Assets/Sprites/Backdrops/backdrop_1.png" id="4_kry3j"]
 
 [sub_resource type="Animation" id="Animation_8gbba"]
 resource_name = "player_idle"
@@ -199,3 +200,9 @@ zoom = Vector2(1.8, 1.8)
 tile_set = SubResource("TileSet_lquwl")
 format = 2
 layer_0/tile_data = PackedInt32Array(65526, 131074, 0, 65527, 131074, 0, 65528, 131074, 0, 65529, 131074, 0, 131063, 131074, 1, 131064, 131074, 1, 131065, 131074, 1, 131066, 196610, 1, 131062, 131074, 1, 196598, 131074, 1, 262134, 131074, 2, 262135, 131074, 2, 262136, 131074, 2, 262137, 131074, 2, 262138, 196610, 2, 196599, 131074, 1, 196600, 131074, 1, 196601, 131074, 1, 196602, 196610, 1, 262133, 65538, 2, 196597, 65538, 1, 131061, 65538, 1, 65525, 65538, 0, 65530, 196610, 0, -131083, 131074, 2, -131082, 65538, 4, -196617, 65538, 4, -262150, 65538, 4, -262152, 131074, 2, -262151, 131074, 2, -327686, 131074, 1, -327685, 131074, 2, -327684, 131074, 2, -327683, 131074, 2, -327682, 131074, 2, -327681, 131074, 2, -393216, 65538, 4, -458752, 196610, 1, -524288, 65538, 3, -458753, 131074, 0, -524290, 196610, 1, -458754, 131074, 1, -589826, 196610, 1, -655362, 196610, 1, -720898, 196610, 1, -786434, 196610, 1, -65539, 65538, 0, -65538, 131074, 0, -65537, 196610, 0, -3, 65538, 2, -2, 131074, 2, -1, 196610, 2, -196618, 131074, 1, -262153, 131074, 1, -196606, 65538, 0, -131070, 65538, 1, -196605, 131074, 0, -131069, 131074, 1, -196604, 196610, 0, -131068, 196610, 1, -65534, 65538, 1, -65533, 131074, 1, -65532, 196610, 1, 2, 65538, 1, 3, 131074, 1, 4, 196610, 1, 65538, 65538, 1, 65539, 131074, 1, 65540, 196610, 1, 131074, 65538, 1, 131075, 131074, 1, 131076, 196610, 1, 196610, 65538, 2, 196611, 131074, 2, 196612, 196610, 2)
+
+[node name="Background" type="Sprite2D" parent="TileMap"]
+z_index = -1
+position = Vector2(-121, -67)
+scale = Vector2(3, 3)
+texture = ExtResource("4_kry3j")
