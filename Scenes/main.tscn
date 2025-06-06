@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b0fmrjnpeusyw"]
 
-[ext_resource type="Script" uid="uid://d2r0dyje3885s" path="res://Assets/character_body_2d.gd" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://d2r0dyje3885s" path="res://Assets/Scripts/player_controller.gd" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://3svnncrbj8eu" path="res://Assets/Sprites/Player/duskborn_sprite.png" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://f7sed208t5ha" path="res://Assets/Tiles/rock_tile.png" id="3_kry3j"]
 
