@@ -192,8 +192,7 @@ position = Vector2(-1.59302, -6)
 scale = Vector2(1.41861, 1.7529)
 shape = SubResource("RectangleShape2D_jjvhh")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -64.54)
+[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.8, 1.8)
 
 [node name="TileMap" type="TileMap" parent="."]

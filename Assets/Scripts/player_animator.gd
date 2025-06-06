@@ -9,3 +9,13 @@ func _process(delta):
 		sprite.flip_h = false
 	elif player_controller.direction == -1:
 		sprite.flip_h = true
+
+	if abs(player_controller.velocity.x) > 0.0:
+		animation_player.play("player_walk")
+	else:
+		animation_player.play("player_idle")
+		
+	if player_controller.velocity.y < 0.0:
+		animation_player.play("player_jump")
+	elif player_controller.velocity.y > 0.0:
+		animation_player.play("player_fall")
