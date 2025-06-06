@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f7sed208t5ha"
-path="res://.godot/imported/rock_tile.png-b788340f2850751c0cf077a9fb972589.ctex"
+uid="uid://b3sn4uvis3evk"
+path="res://.godot/imported/wisp.png-16a802054edae437dd61b0a0f6af163a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/rock_tile.png"
-dest_files=["res://.godot/imported/rock_tile.png-b788340f2850751c0cf077a9fb972589.ctex"]
+source_file="res://Assets/Sprites/Enemies/wisp.png"
+dest_files=["res://.godot/imported/wisp.png-16a802054edae437dd61b0a0f6af163a.ctex"]
 
 [params]
 
