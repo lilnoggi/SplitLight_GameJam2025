@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d282lpillam15"
+path="res://.godot/imported/Level 4 (Lantern In).wav-157c633c8c2d62724d366d049e82beac.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Level 4 (Lantern In).wav"
+dest_files=["res://.godot/imported/Level 4 (Lantern In).wav-157c633c8c2d62724d366d049e82beac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

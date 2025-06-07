@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7u7bl5uhvp1"
+path="res://.godot/imported/Level 3 (Lantern Out).wav-15b57f85925ddf2af7a8ec403da0947a.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Level 3 (Lantern Out).wav"
+dest_files=["res://.godot/imported/Level 3 (Lantern Out).wav-15b57f85925ddf2af7a8ec403da0947a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

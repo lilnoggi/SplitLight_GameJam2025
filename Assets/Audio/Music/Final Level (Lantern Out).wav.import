@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hnvs2by36104"
+path="res://.godot/imported/Final Level (Lantern Out).wav-77cd7a136532b18380c696741e4ced21.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Final Level (Lantern Out).wav"
+dest_files=["res://.godot/imported/Final Level (Lantern Out).wav-77cd7a136532b18380c696741e4ced21.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
