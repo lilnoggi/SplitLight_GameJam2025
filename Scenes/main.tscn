@@ -1,28 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://b0fmrjnpeusyw"]
 
-[ext_resource type="Script" uid="uid://d2r0dyje3885s" path="res://Assets/Scripts/player_controller.gd" id="1_8gbba"]
+[ext_resource type="Script" path="res://Assets/Scripts/player_controller.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://3svnncrbj8eu" path="res://Assets/Sprites/Player/duskborn_sprite.png" id="2_8gbba"]
-[ext_resource type="Script" uid="uid://caqo4a6qo1lgq" path="res://Assets/Scripts/player_animator.gd" id="2_jjvhh"]
+[ext_resource type="Script" path="res://Assets/Scripts/player_animator.gd" id="2_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://f7sed208t5ha" path="res://Assets/Tiles/rock_tile.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ndugg20hhy6w" path="res://Assets/Sprites/Backdrops/backdrop_1.png" id="4_kry3j"]
-
-[sub_resource type="Animation" id="Animation_8gbba"]
-resource_name = "player_idle"
-length = 2.25
-loop_mode = 1
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Rect2(0, 0, 64, 64), Rect2(64, 0, 64, 64), Rect2(128, 0, 64, 64), Rect2(192, 0, 64, 64), Rect2(256, 0, 64, 64), Rect2(320, 0, 64, 64), Rect2(384, 0, 64, 64), Rect2(448, 0, 64, 64), Rect2(512, 0, 64, 64), Rect2(576, 0, 64, 64)]
-}
 
 [sub_resource type="Animation" id="Animation_jjvhh"]
 length = 0.001
@@ -39,10 +21,9 @@ tracks/0/keys = {
 "values": [Rect2(0, 0, 64, 64)]
 }
 
-[sub_resource type="Animation" id="Animation_kry3j"]
-resource_name = "player_walk"
-length = 1.75
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_344ge"]
+resource_name = "player_death"
+length = 2.0
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -51,27 +32,10 @@ tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Rect2(0, 320, 64, 64), Rect2(64, 320, 64, 64), Rect2(128, 320, 64, 64), Rect2(192, 320, 64, 64), Rect2(256, 320, 64, 64), Rect2(320, 320, 64, 64), Rect2(384, 320, 64, 64), Rect2(448, 320, 64, 64)]
-}
-
-[sub_resource type="Animation" id="Animation_21xkr"]
-resource_name = "player_jump"
-length = 0.5
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Rect2(0, 896, 64, 64), Rect2(64, 896, 64, 64), Rect2(128, 896, 64, 64)]
+"values": [Rect2(0, 576, 64, 64), Rect2(64, 576, 64, 64), Rect2(128, 576, 64, 64), Rect2(192, 576, 64, 64), Rect2(256, 576, 64, 64), Rect2(320, 576, 64, 64), Rect2(384, 576, 64, 64), Rect2(448, 576, 64, 64), Rect2(512, 576, 64, 64)]
 }
 
 [sub_resource type="Animation" id="Animation_6bp64"]
@@ -92,9 +56,10 @@ tracks/0/keys = {
 "values": [Rect2(0, 768, 64, 64), Rect2(64, 768, 64, 64), Rect2(128, 768, 64, 64)]
 }
 
-[sub_resource type="Animation" id="Animation_344ge"]
-resource_name = "player_death"
-length = 2.0
+[sub_resource type="Animation" id="Animation_8gbba"]
+resource_name = "player_idle"
+length = 2.25
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -103,10 +68,45 @@ tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Rect2(0, 576, 64, 64), Rect2(64, 576, 64, 64), Rect2(128, 576, 64, 64), Rect2(192, 576, 64, 64), Rect2(256, 576, 64, 64), Rect2(320, 576, 64, 64), Rect2(384, 576, 64, 64), Rect2(448, 576, 64, 64), Rect2(512, 576, 64, 64)]
+"values": [Rect2(0, 0, 64, 64), Rect2(64, 0, 64, 64), Rect2(128, 0, 64, 64), Rect2(192, 0, 64, 64), Rect2(256, 0, 64, 64), Rect2(320, 0, 64, 64), Rect2(384, 0, 64, 64), Rect2(448, 0, 64, 64), Rect2(512, 0, 64, 64), Rect2(576, 0, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_21xkr"]
+resource_name = "player_jump"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 896, 64, 64), Rect2(64, 896, 64, 64), Rect2(128, 896, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_kry3j"]
+resource_name = "player_walk"
+length = 1.75
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 320, 64, 64), Rect2(64, 320, 64, 64), Rect2(128, 320, 64, 64), Rect2(192, 320, 64, 64), Rect2(256, 320, 64, 64), Rect2(320, 320, 64, 64), Rect2(384, 320, 64, 64), Rect2(448, 320, 64, 64)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kry3j"]
@@ -163,9 +163,7 @@ sources/2 = SubResource("TileSetAtlasSource_h2yge")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(-314, -17)
-script = ExtResource("1_8gbba")
-speed = 8.0
-jump_power = 12.0
+script = ExtResource("1_kry3j")
 
 [node name="PlayerAnimator" type="Node2D" parent="Player" node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_jjvhh")
