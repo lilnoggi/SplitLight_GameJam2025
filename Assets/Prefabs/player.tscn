@@ -1,0 +1,153 @@
+[gd_scene load_steps=12 format=3 uid="uid://clynwrcwufvm7"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/player_controller.gd" id="1_ebihn"]
+[ext_resource type="Script" path="res://Assets/Scripts/player_animator.gd" id="2_x4ukv"]
+[ext_resource type="Texture2D" uid="uid://3svnncrbj8eu" path="res://Assets/Sprites/Player/duskborn_sprite.png" id="3_m0ojv"]
+
+[sub_resource type="Animation" id="Animation_jjvhh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_344ge"]
+resource_name = "player_death"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 576, 64, 64), Rect2(64, 576, 64, 64), Rect2(128, 576, 64, 64), Rect2(192, 576, 64, 64), Rect2(256, 576, 64, 64), Rect2(320, 576, 64, 64), Rect2(384, 576, 64, 64), Rect2(448, 576, 64, 64), Rect2(512, 576, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_6bp64"]
+resource_name = "player_fall"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 768, 64, 64), Rect2(64, 768, 64, 64), Rect2(128, 768, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_8gbba"]
+resource_name = "player_idle"
+length = 2.25
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 64, 64), Rect2(64, 0, 64, 64), Rect2(128, 0, 64, 64), Rect2(192, 0, 64, 64), Rect2(256, 0, 64, 64), Rect2(320, 0, 64, 64), Rect2(384, 0, 64, 64), Rect2(448, 0, 64, 64), Rect2(512, 0, 64, 64), Rect2(576, 0, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_21xkr"]
+resource_name = "player_jump"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 896, 64, 64), Rect2(64, 896, 64, 64), Rect2(128, 896, 64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_kry3j"]
+resource_name = "player_walk"
+length = 1.75
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 320, 64, 64), Rect2(64, 320, 64, 64), Rect2(128, 320, 64, 64), Rect2(192, 320, 64, 64), Rect2(256, 320, 64, 64), Rect2(320, 320, 64, 64), Rect2(384, 320, 64, 64), Rect2(448, 320, 64, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kry3j"]
+_data = {
+&"RESET": SubResource("Animation_jjvhh"),
+&"player_death": SubResource("Animation_344ge"),
+&"player_fall": SubResource("Animation_6bp64"),
+&"player_idle": SubResource("Animation_8gbba"),
+&"player_jump": SubResource("Animation_21xkr"),
+&"player_walk": SubResource("Animation_kry3j")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjvhh"]
+size = Vector2(19.1639, 26.2422)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ebihn")
+
+[node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
+script = ExtResource("2_x4ukv")
+player_controller = NodePath("..")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_kry3j")
+}
+autoplay = "player_idle"
+speed_scale = 2.3
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator"]
+position = Vector2(0, -7)
+texture = ExtResource("3_m0ojv")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1.59302, -6)
+scale = Vector2(1.41861, 1.7529)
+shape = SubResource("RectangleShape2D_jjvhh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.8, 1.8)
